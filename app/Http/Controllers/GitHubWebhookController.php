@@ -17,6 +17,15 @@ class GitHubWebhookController extends Controller
             return response('pong', 200);  // Respond to GitHub's ping
         }
 
+        $secret = '9YiKoIXVqym0kpP4yf5/SyvJDF0UeRdk4+0QRlUw8';
+$signature = $request->header('X-Hub-Signature');
+$payload = $request->getContent();
+$hash = 'sha1=' . hash_hmac('sha1', $payload, $secret);
+
+if (!hash_equals($hash, $signature)) {
+    return response('Invalid signature', 403);
+}
+
         // Handle Push Event
         if ($request->has('ref')) {
             // This is a push event from GitHub
