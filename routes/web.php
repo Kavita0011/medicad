@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\GitHubWebhookController;
 
-Route::post('/github-webhook', [GitHubWebhookController::class, 'handle']);
+Route::match(['get', 'post'], '/github-webhook', [GitHubWebhookController::class, 'handle']);
 
 Route::get('/', function () {
     return view('welcome');
