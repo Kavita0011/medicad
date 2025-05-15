@@ -34,8 +34,8 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-//     'github' => [
-//     'webhook_secret' => env('GITHUB_WEBHOOK_SECRET'),
-// ],
+    'github' => [
+    'webhook_secret' => env('GITHUB_WEBHOOK_SECRET'),
+],
 
 ];
