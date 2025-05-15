@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GitHubWebhookController;
 
 Route::match(['get', 'post'], '/github-webhook', [GitHubWebhookController::class, 'handle']);
@@ -12,3 +13,4 @@ Route::get('/', function () {
 });
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index']);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us — Laravel App</title>
+    <title>Contact Us — Laravel App</title>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
