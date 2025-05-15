@@ -9,7 +9,8 @@ class GitHubWebhookController extends Controller
 {
     public function handle(Request $request)
     {
-        $secret = env('GITHUB_WEBHOOK_SECRET');
+     $secret = config('services.github.webhook_secret');
+
 
         // Get the signature sent by GitHub
         $signature = $request->header('X-Hub-Signature');       // sha1=...
