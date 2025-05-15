@@ -72,6 +72,4 @@ class GitHubWebhookController extends Controller
         }
     }
 }
-
-
 ?>
