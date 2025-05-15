@@ -11,4 +11,7 @@ class ContactController extends Controller
 {
     return view('contact');
 }
+
+
+// contact form submission
 }
