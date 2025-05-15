@@ -63,7 +63,7 @@ class GitHubWebhookController extends Controller
 
     private function deployCode()
     {
-        exec('git pull origin main', $output, $resultCode);
+exec('cd /var/www/laravel && git pull origin main 2>&1', $output, $resultCode);
 
         if ($resultCode === 0) {
             Log::info('Deployment successful: ' . implode("\n", $output));
